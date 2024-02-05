@@ -7,16 +7,32 @@
   <script>
     function process(){
       let inp = document.getElementById("ENUMCLASSINP").value;
-      let res = "";
+      let res = "switch (INSERT_VAR_HERE){\n";
+      let name = "";
       let tok = inp.split(" ");
+      let vars;
       for (let i in tok){
-        alert(tok[i]);
+        if (tok[i-1] == "class"){
+          name = tok[i];
+        }
+        if (tok[i][0] == '{'){
+          vars = tok[i].split(",");
+          for (let j in vars){
+            vars[j] = vars[j].trim();
+          }
+        }
       }
+
+      for (let i in vars){
+        res += "case " + name + "::" + vars[i] + ":\nbreak;\n";
+      }
+      res += "}"
+      alert(res);
     }
   </script>
 </head>
 <body>
   <textarea id="ENUMCLASSINP"></textarea>
-  <button onclick="process()"></button>
+  <button onclick="process()">PROCESS</button>
 </body>
 </html>
