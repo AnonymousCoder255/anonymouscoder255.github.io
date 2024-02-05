@@ -7,7 +7,11 @@
   <script>
     function process(){
       let inp = document.getElementById("ENUMCLASSINP");
-      alert(inp.value);
+      let res = "";
+      let tok = inp.split(" ");
+      for (let i in tok){
+        alert(tok[i]);
+      }
     }
   </script>
 </head>
