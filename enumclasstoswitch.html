@@ -16,7 +16,7 @@
           name = tok[i];
         }
         if (tok[i][0] == '{'){
-          vars = tok[i].split(",");
+          vars = (tok[i].subtring(1, tok[i].length-1)).split(",");
           for (let j in vars){
             vars[j] = vars[j].trim();
           }
