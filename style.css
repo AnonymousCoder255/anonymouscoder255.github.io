@@ -8,13 +8,12 @@
 
 body {
 	background-color: #333333;
-	color: #00FF00;
 }
 
 div {
 	width: fit-content;
 	padding: 15px;
-	border: 5px solid black;
+	border: 5px solid #222222;
 	
 	margin: 0;
 	position: absolute;
