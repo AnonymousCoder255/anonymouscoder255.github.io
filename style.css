@@ -6,8 +6,20 @@
 	font-size: 40px;
 }
 
-body {
+.Da {
+	color: #AAAAFF;
+}
+
+.La {
+	color: #1111DD;
+}
+
+.Dbackg {
 	background-color: #333333;
+}
+
+.Lbackg {
+	background-color: #EFEFDD;
 }
 
 div {
@@ -21,8 +33,4 @@ div {
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-}
-
-a {
-	color: #AAAAFF;
 }
