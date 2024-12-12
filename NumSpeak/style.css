@@ -6,6 +6,7 @@ th, td {
 	height: 30px;
 	padding-left: 3px;
 	margin: 0px;
+	transition: background-color 0.3s;
 }
 
 th {
@@ -20,6 +21,7 @@ tr {
 	background-color: #d0d0d0;
 	font-family: "Times New Roman", serif;
 	font-size: 12px;
+	transition: background-color 0.3s;
 }
 tr:hover {
 	background-color: #dCdCdC;
@@ -45,6 +47,7 @@ p {
 	font-optical-sizing: auto;
 	font-family: "Roboto Mono", monospace;
 	font-style: normal;
+	font-size: 20px;
 }
 
 .Lp {
