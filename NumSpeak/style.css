@@ -16,10 +16,16 @@ th {
 	font-style: normal;
 }
 
-td {
+tr {
 	background-color: #d0d0d0;
 	font-family: "Times New Roman", serif;
 	font-size: 12px;
+}
+tr:hover {
+	background-color: #dCdCdC;
+}
+td:hover {
+	background-color: #eeeeee;
 }
 
 table { 
