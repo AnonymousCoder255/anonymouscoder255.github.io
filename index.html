@@ -14,7 +14,7 @@
 	  <input type="checkbox" id="themeSwitch" onclick="changeTheme()">
 	  <span class="slider material-symbols-outlined"></span>
 	</label>
-	<div style="text-align:center">
+	<div style="text-align:center" class="contain Ddiv">
 		<a href="./ACES-Docs/index.html" class="subLink Da">Anonymous Coder Entertainment System</a>
 		<br />
 		<a href="./Car/" class="subLink Da">Car Racing Game Thingy</a>
@@ -34,12 +34,20 @@
 				for (var i = 0; i < subs.length; i++){
 					subs[i].classList.replace("Da", "La");
 				}
+				subs = document.getElementsByClassName("contain");
+				for (var i = 0; i < subs.length; i++){
+					subs[i].classList.replace("Ddiv", "Ldiv");
+				}
 			} else {
 				var body = document.getElementById("backG");
 				body.classList.replace("Lbackg", "Dbackg");
 				var subs = document.getElementsByClassName("subLink");
 				for (var i = 0; i < subs.length; i++){
 					subs[i].classList.replace("La", "Da");
+				}
+				subs = document.getElementsByClassName("contain");
+				for (var i = 0; i < subs.length; i++){
+					subs[i].classList.replace("Ldiv", "Ddiv");
 				}
 			}
 		}
