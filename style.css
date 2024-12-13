@@ -27,7 +27,6 @@
 div {
 	width: fit-content;
 	padding: 15px;
-	border-radius: 10px;
 	
 	margin: 0;
 	position: absolute;
@@ -38,10 +37,12 @@ div {
 }
 
 .Ldiv {
-	transition: border 0.5s;
+	transition: all 0.5s;
 	border: 5px solid #DDDDDD;
+	border-radius: 0px;
 }
 .Ddiv {
-	transition: border 0.5s;
+	transition: all 0.5s;
 	border: 5px solid #222222;
+	border-radius: 10px;
 }

@@ -25,9 +25,10 @@
 	</div>
 	
 	<script type=text/javascript>
+		var sw = document.getElementById("themeSwitch");
 		function changeTheme() {
-			var sw = document.getElementById("themeSwitch");
 			if (sw.checked){
+				localStorage.setItem("_MAIN_MODE", "light");
 				var body = document.getElementById("backG");
 				body.classList.replace("Dbackg", "Lbackg");
 				var subs = document.getElementsByClassName("subLink");
@@ -39,6 +40,7 @@
 					subs[i].classList.replace("Ddiv", "Ldiv");
 				}
 			} else {
+				localStorage.setItem("_MAIN_MODE", "dark");
 				var body = document.getElementById("backG");
 				body.classList.replace("Lbackg", "Dbackg");
 				var subs = document.getElementsByClassName("subLink");
@@ -50,6 +52,18 @@
 					subs[i].classList.replace("Ldiv", "Ddiv");
 				}
 			}
+		}
+		
+		var mode = localStorage.getItem("_MAIN_MODE");
+		
+		if (mode === null){
+			if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				sw.checked = false;
+			} else {
+				sw.checked = true;
+			}
+		} else {
+			sw.checked = mode == "light";
 		}
 		
 		changeTheme();
