@@ -11,7 +11,7 @@ th, td {
 }
 
 th {
-	background-color: #ccddcc;
+	background-color: #00FF0011;
 	font-family: "Roboto Mono", monospace;
 	font-size: 15px;
 	font-optical-sizing: auto;
@@ -108,5 +108,5 @@ p {
 }
 
 .needsOperator {
-	background-color: #E5E5C7;
+	background-color: #FFFFCC77;
 }
