@@ -106,3 +106,7 @@ p {
 	visibility: visible;
 	opacity: 1;
 }
+
+.needsOperator {
+	background-color: #E5E5C7;
+}
