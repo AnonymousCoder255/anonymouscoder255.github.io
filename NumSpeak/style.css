@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+.topLeft{
+	position: absolute;
+	top: 8px;
+	left: 8px;
+}
 
 th, td {
 	border: 1px solid #666666;
@@ -48,10 +53,12 @@ caption {
 	background-color: #EFEFEE;
 }
 
-p {
+p, h1 {
 	font-optical-sizing: auto;
 	font-family: "Roboto Mono", monospace;
 	font-style: normal;
+}
+p {
 	font-size: 20px;
 }
 
