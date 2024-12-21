@@ -5,13 +5,23 @@
 	font-style: normal;
 	font-size: 40px;
 }
+a {
+	text-decoration: none;
+	font-smooth: never;
+}
 
 .Da {
 	color: #AAAAFF;
 }
+.Da:hover {
+	color: #AADDDD;
+}
 
 .La {
-	color: #1111DD;
+	color: #11c;
+}
+.La:hover {
+	color: #1aa;
 }
 
 .Dbackg {
@@ -25,6 +35,8 @@
 }
 
 div {
+	line-height: 1.2;
+	
 	width: fit-content;
 	padding: 15px;
 	

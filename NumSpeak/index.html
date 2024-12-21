@@ -9,12 +9,13 @@
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body class="Dbackg" id="backG">
-	<h1 class="para Dp" style="text-align: center;">1*6 (5*2)/5 Specifications</h1>
+	<h1 class="para Dp" style="text-align: center;">1*6 (5*2)/5</h1>
 	<label class="switch topLeft">
 	  <input type="checkbox" id="themeSwitch" onclick="changeTheme()">
 	  <span class="slider material-symbols-outlined"></span>
 	</label>
 	
+	<p class="para Dp">This is a <a target="_blank" rel="noopener noreferrer" class="extLink Da" href="https://en.wikipedia.org/wiki/Constructed_language">conlang</a> made entirely using numerical syntax. A ton of it was made by <a target="_blank" rel="noopener noreferrer" class="extLink Da" href="https://www.youtube.com/@zantonlan">Zantonlan</a>.</p>
 	
 	<p class="para Dp">The first thing to understand is multiplication. There are 13 symbols: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, Δ, π, and Σ (By default, these are multiplied by 1). When they are multiplied, their meaning changes to something in the following chart where horizontality is the base and verticality is the factor:</p>
 	
@@ -202,12 +203,20 @@
 				for (var i = 0; i < subs.length; i++){
 					subs[i].classList.replace("Dp", "Lp");
 				}
+				subs = document.getElementsByClassName("extLink");
+				for (var i = 0; i < subs.length; i++){
+					subs[i].classList.replace("Da", "La");
+				}
 			} else {
 				var body = document.getElementById("backG");
 				body.classList.replace("Lbackg", "Dbackg");
 				var subs = document.getElementsByClassName("para");
 				for (var i = 0; i < subs.length; i++){
 					subs[i].classList.replace("Lp", "Dp");
+				}
+				subs = document.getElementsByClassName("extLink");
+				for (var i = 0; i < subs.length; i++){
+					subs[i].classList.replace("La", "Da");
 				}
 			}
 		}

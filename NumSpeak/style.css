@@ -6,6 +6,25 @@
 	left: 8px;
 }
 
+a {
+	text-decoration: none;
+	font-smooth: never;
+}
+
+.Da {
+	color: #AAAAFF;
+}
+.Da:hover {
+	color: #AADDDD;
+}
+
+.La {
+	color: #11c;
+}
+.La:hover {
+	color: #1aa;
+}
+
 th, td {
 	border: 1px solid #666666;
 	width: 100px;
