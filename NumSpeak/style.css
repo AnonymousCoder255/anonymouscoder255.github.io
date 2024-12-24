@@ -34,6 +34,10 @@ th, td {
 	transition: background-color 0.2s;
 }
 
+.tableDesc {
+	background-color: #DDEEDD;
+}
+
 th {
 	background-color: #00FF0011;
 	font-family: "Roboto Mono", monospace;
@@ -135,4 +139,14 @@ p {
 
 .needsOperator {
 	background-color: #FFFFCC77;
+}
+
+.nope {
+	background-color: #00000022;
+}
+
+.numspeak {
+	border-radius: 3px;
+	background-color: #00000044;
+	font-family: "Times New Roman", Serif;
 }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>NumberSpeak Specifications P2</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0" />
+		<link rel="stylesheet" href="../switch.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+	</head>
+	<body class="Dbackg" id="backG">
+		<h1 class="para Dp" style="text-align: center;">1*6 (5*2)/5</h1>
+		<label class="switch topLeft">
+		  <input type="checkbox" id="themeSwitch" onclick="changeTheme()">
+		  <span class="slider material-symbols-outlined"></span>
+		</label>
+		<p class="para Dp">
+			The + and - symbols: These are prefixed onto "words" (x*y) to change the meaning. Usually it means good/bad or yes/no respectively, but it could mean other things.
+		<br />
+			Some words have a necessary + or - in front (Ex: 4 or Δ*5). These words are highlighted yellow in <a href="./index.html" class="extLink Da">the previous chart</a>; 
+			a + makes it the left side (of the /) while a - makes it the right side.
+		</p>
+		<br />
+		<p class="para Dp">
+			Parentheses are usually a grouping symbol, but it depends on how many there are:
+		</p>
+		<table>
+			<tr><th></th><th>(x)</th><th>((x))</th><th>(((x)))</th></tr>
+			<tr><th>Meaning</th><td>Grouping</td><td class="tooltip">Name<span class="tooltiptext">Written in any writing system.</span></td><td class="tooltip">Amount<span class="tooltiptext">Written with any numerical writing system.</span></td></tr>
+		</table>
+		<p class="para Dp">
+			As an example, instead of <span class="numspeak">1 0*7 2*3.</span>, it can look nicer to write <span class="numspeak">1 (0*7) (2*3).</span>
+		</p>
+		<a href="./index.html" class = "extLink Da" style="font-size: 20pt;">PREVIOUS</a> <br />
+		<a href="./index3.html" class = "extLink Da" style="font-size: 20pt;">NEXT</a>
+		
+		<script type=text/javascript>
+		function changeTheme() {
+			var sw = document.getElementById("themeSwitch");
+			if (sw.checked){
+				var body = document.getElementById("backG");
+				body.classList.replace("Dbackg", "Lbackg");
+				var subs = document.getElementsByClassName("para");
+				for (var i = 0; i < subs.length; i++){
+					subs[i].classList.replace("Dp", "Lp");
+				}
+				subs = document.getElementsByClassName("extLink");
+				for (var i = 0; i < subs.length; i++){
+					subs[i].classList.replace("Da", "La");
+				}
+			} else {
+				var body = document.getElementById("backG");
+				body.classList.replace("Lbackg", "Dbackg");
+				var subs = document.getElementsByClassName("para");
+				for (var i = 0; i < subs.length; i++){
+					subs[i].classList.replace("Lp", "Dp");
+				}
+				subs = document.getElementsByClassName("extLink");
+				for (var i = 0; i < subs.length; i++){
+					subs[i].classList.replace("La", "Da");
+				}
+			}
+		}
+		
+		changeTheme();
+	</script>
+	</body>
+</html>
