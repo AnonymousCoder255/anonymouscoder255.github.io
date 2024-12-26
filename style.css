@@ -34,7 +34,7 @@ a {
 	background-color: #EFEFEE;
 }
 
-div {
+.contain {
 	line-height: 1.2;
 	
 	width: fit-content;
@@ -57,4 +57,20 @@ div {
 	transition: all 0.5s;
 	border: 5px solid #222222;
 	border-radius: 10px;
+}
+
+details > summary {
+
+	list-style: none;
+	cursor: pointer;
+}
+
+details > div {
+	background-color: #00000030;
+}
+
+details > summary::-webkit-details-marker {
+
+	display: none;
+
 }
