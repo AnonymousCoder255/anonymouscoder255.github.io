@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .topLeft{
 	position: absolute;
@@ -64,33 +63,29 @@ table {
 	border-collapse: collapse; 
 }
 caption {
-	color: #888888;
+	color: var(--tc);
 	caption-side: bottom;
 }
 
 .Dbackg {
 	transition: background-color 0.5s;
 	background-color: #333334;
+	--tc: #DDD;
 }
 .Lbackg {
 	transition: background-color 0.5s;
 	background-color: #EFEFEE;
+	--tc: #111;
 }
 
-p, h1 {
+p, h1, details, .top, .bottom {
 	font-optical-sizing: auto;
 	font-family: "Roboto Mono", monospace;
 	font-style: normal;
+	color: var(--tc);
 }
-p {
+p, details {
 	font-size: 20px;
-}
-
-.Lp {
-	color: #111111;
-}
-.Dp {
-	color: #DDDDDD;
 }
 
 .tooltip{
@@ -146,8 +141,46 @@ p {
 	background-color: #00000022;
 }
 
-.numspeak {
+.numspeak, .example::after, .frac {
 	border-radius: 3px;
 	background-color: #00000044;
-	font-family: "Courier Prime", "Courier New", monospace;
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+}
+
+.frac {
+	color: var(--tc);
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+}
+.frac > span {
+    display: block;
+    padding: 0.1em;
+	font-optical-sizing: auto;
+	font-family: "Roboto Mono", monospace;
+	font-style: normal;
+	font-size: 20px;
+	background-color: #0000;
+}
+.frac span.bottom {
+	border-radius: 0px;
+    border-top: 2px solid;
+}
+.frac span.symbol {
+    display: none;
+} 
+
+.example {
+	display: inline;
+}
+
+.example:not(:hover)::after {
+	content: "?";
+}
+
+.example:hover::after {
+	content: var(--translation);
 }

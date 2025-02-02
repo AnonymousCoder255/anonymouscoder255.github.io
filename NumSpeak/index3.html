@@ -2,53 +2,51 @@
 
 <html>
 	<head>
-		<title>NumberSpeak Specifications P2</title>
+		<title>NumberSpeak Specifications P3</title>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0" />
 		<link rel="stylesheet" href="../switch.css">
 		<link rel="stylesheet" href="style.css">
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
 	</head>
 	<body class="Dbackg" id="backG">
-		<h1 class="para Dp" style="text-align: center;"><span class="numspeak">(1*6)((5*2)/5)</span></h1>
+		<h1  style="text-align: center;"><span class="numspeak">(1*6)((5*2)/5)</span></h1>
 		<label class="switch topLeft">
 		  <input type="checkbox" id="themeSwitch" onclick="changeTheme()">
 		  <span class="slider material-symbols-outlined"></span>
 		</label>
 		
-		<p class="para Dp">Division!<br />Division turns the divisor into adjective(s) describing the dividend. When written horizontally, it <b>must</b> be grouped like so:<br /><span class="numspeak">1(+4)((5*5)/(5*4)).</span><br /><span class="numspeak">I like (game/fun).</span><br /><span class="numspeak">I like a fun game.</span></p>
-		<p class="para Dp">With that, you can decode the title: <span class="numspeak">(1*6)((5*2)/5)</span> meaning <span class="numspeak">learn (language/number)</span> or "Learn the Language Of Numbers (NumberSpeak)."</p>
-		
+		<p >Division!<br />Division turns the divisor into adjective(s) describing the dividend. When written horizontally, it <b>must</b> be grouped like so:<br /><span class="numspeak">1(+4)((5*5)/(5*4)).</span><br /><span class="numspeak">I like (game/fun).</span><br /><span class="numspeak">I like a fun game.</span></p>
+		<p >With that, you can decode the title: <span class="numspeak">(1*6)((5*2)/5)</span> meaning <span class="numspeak">learn (language/number)</span> or "Learn the Language Of Numbers (NumberSpeak)."</p>
+		<p >Division done vertically looks like this:</p>
+		<div class="frac numspeak">
+			<span class="numspeak">5*2</span>
+			<span class="symbol">/</span>
+			<span class="bottom numspeak">5</span>
+		</div>
+		<p>With less need for grouping.</p>
 		<a href="../index.html" class = "extLink Da" style="font-size: 20pt;">MAIN PAGE</a>
 		
 		<script type=text/javascript>
-		function changeTheme() {
-			var sw = document.getElementById("themeSwitch");
-			if (sw.checked){
-				var body = document.getElementById("backG");
-				body.classList.replace("Dbackg", "Lbackg");
-				var subs = document.getElementsByClassName("para");
-				for (var i = 0; i < subs.length; i++){
-					subs[i].classList.replace("Dp", "Lp");
-				}
-				subs = document.getElementsByClassName("extLink");
-				for (var i = 0; i < subs.length; i++){
-					subs[i].classList.replace("Da", "La");
-				}
-			} else {
-				var body = document.getElementById("backG");
-				body.classList.replace("Lbackg", "Dbackg");
-				var subs = document.getElementsByClassName("para");
-				for (var i = 0; i < subs.length; i++){
-					subs[i].classList.replace("Lp", "Dp");
-				}
-				subs = document.getElementsByClassName("extLink");
-				for (var i = 0; i < subs.length; i++){
-					subs[i].classList.replace("La", "Da");
+			function changeTheme() {
+				var sw = document.getElementById("themeSwitch");
+				if (sw.checked){
+					var body = document.getElementById("backG");
+					body.classList.replace("Dbackg", "Lbackg");
+					var subs = document.getElementsByClassName("extLink");
+					for (var i = 0; i < subs.length; i++){
+						subs[i].classList.replace("Da", "La");
+					}
+				} else {
+					var body = document.getElementById("backG");
+					body.classList.replace("Lbackg", "Dbackg");
+					var subs = document.getElementsByClassName("extLink");
+					for (var i = 0; i < subs.length; i++){
+						subs[i].classList.replace("La", "Da");
+					}
 				}
 			}
-		}
-		
-		changeTheme();
-	</script>
+			
+			changeTheme();
+		</script>
 	</body>
 </html>

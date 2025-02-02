@@ -9,59 +9,59 @@
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
 	</head>
 	<body class="Dbackg" id="backG">
-		<h1 class="para Dp" style="text-align: center;"><span class="numspeak">(1*6)((5*2)/5)</span></h1>
+		<h1  style="text-align: center;"><span class="numspeak">(1*6)((5*2)/5)</span></h1>
 		<label class="switch topLeft">
 		  <input type="checkbox" id="themeSwitch" onclick="changeTheme()">
 		  <span class="slider material-symbols-outlined"></span>
 		</label>
-		<p class="para Dp">
+		<p >
 			The + and - symbols: These are prefixed onto "words" (x*y) to change the meaning. Usually it means good/bad or yes/no respectively, but it could mean other things.
 		<br />
 			Some words have a necessary + or - in front (Ex: 4 or Δ*5). These words are highlighted yellow in <a href="./index.html" class="extLink Da">the previous chart</a>; 
 			a + makes it the left side (of the /) while a - makes it the right side.
 		</p>
 		<br />
-		<p class="para Dp">
+		<p >
 			Parentheses are usually a grouping symbol, but it depends on how many there are:
 		</p>
 		<table>
 			<tr><th></th><th>(x)</th><th>((x))</th><th>(((x)))</th></tr>
 			<tr><th>Meaning</th><td>Grouping</td><td class="tooltip">Name<span class="tooltiptext">Written in any writing system.</span></td><td class="tooltip">Amount<span class="tooltiptext">Written with any numerical writing system.</span></td></tr>
 		</table>
-		<p class="para Dp">
-			With this, you can write a full sentence! NumberSpeak has English punctuation (ignore factorials and decimals, they don't exist.) and Toki Pona-like grammar. Multiplication must be grouped, so you can have a sentence like so: <span class="numspeak">1(0*7)(2*3).</span> which means "I see a rainbow".</span>
+		<p>
+			With this, you can write a full sentence! NumberSpeak has English punctuation and SVO word order (ignore factorials and decimals, they don't exist.) Multiplication must be grouped, so you can have a sentence like so: <span class="numspeak">1(0*7)(2*3).</span> which means "I see a rainbow".</span>
 		</p>
+		
+		<p>
+			Let's practice! Some example sentences; hover to see translation:
+		</p>
+		
+		<p class="example" style="--translation: '1(0*7)π';">I see a circle. </p><br />
+		<p class="example" style="--translation: '1(+4)(9*2)';">I like people. </p><br />
+		<br />
 		<a href="../index.html" class = "extLink Da" style="font-size: 20pt;">MAIN PAGE</a>
 		
 		<script type=text/javascript>
-		function changeTheme() {
-			var sw = document.getElementById("themeSwitch");
-			if (sw.checked){
-				var body = document.getElementById("backG");
-				body.classList.replace("Dbackg", "Lbackg");
-				var subs = document.getElementsByClassName("para");
-				for (var i = 0; i < subs.length; i++){
-					subs[i].classList.replace("Dp", "Lp");
-				}
-				subs = document.getElementsByClassName("extLink");
-				for (var i = 0; i < subs.length; i++){
-					subs[i].classList.replace("Da", "La");
-				}
-			} else {
-				var body = document.getElementById("backG");
-				body.classList.replace("Lbackg", "Dbackg");
-				var subs = document.getElementsByClassName("para");
-				for (var i = 0; i < subs.length; i++){
-					subs[i].classList.replace("Lp", "Dp");
-				}
-				subs = document.getElementsByClassName("extLink");
-				for (var i = 0; i < subs.length; i++){
-					subs[i].classList.replace("La", "Da");
+			function changeTheme() {
+				var sw = document.getElementById("themeSwitch");
+				if (sw.checked){
+					var body = document.getElementById("backG");
+					body.classList.replace("Dbackg", "Lbackg");
+					var subs = document.getElementsByClassName("extLink");
+					for (var i = 0; i < subs.length; i++){
+						subs[i].classList.replace("Da", "La");
+					}
+				} else {
+					var body = document.getElementById("backG");
+					body.classList.replace("Lbackg", "Dbackg");
+					var subs = document.getElementsByClassName("extLink");
+					for (var i = 0; i < subs.length; i++){
+						subs[i].classList.replace("La", "Da");
+					}
 				}
 			}
-		}
-		
-		changeTheme();
-	</script>
+			
+			changeTheme();
+		</script>
 	</body>
 </html>
