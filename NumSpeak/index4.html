@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>NumberSpeak Specifications P4</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0" />
+		<link rel="stylesheet" href="../switch.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<script>window.MathJax = { MathML: { extensions: ["mml3.js", "content-mathml.js"]}};</script>
+		<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=MML_HTMLorMML"></script>
+	</head>
+	<body class="Dbackg" id="backG">
+		<h1  style="text-align: center;"><span class="numspeak">(1*6)((5*2)/5)</span></h1>
+		<label class="switch topLeft">
+		  <input type="checkbox" id="themeSwitch" onclick="changeTheme()">
+		  <span class="slider material-symbols-outlined"></span>
+		</label>
+		
+		<p>The radical radicals are quite rad(ical).</p>
+		
+		<p>Square roots make questions; when simply square rooting a noun you can ask "what/which (noun)," so "where?" can be:
+		
+		<math>
+			<mroot>
+				<mrow>
+					<mn>7</mn>
+					<mo>*</mo>
+					<mn>5</mn>
+				</mrow>
+				<mn>2</mn>
+			</mroot>
+		</math>
+		</p>
+		<p>In similar fashion, "who?" can be:
+		<math>
+			<mroot>
+				<mrow>
+					<mn>9</mn>
+					<mo>*</mo>
+					<mn>2</mn>
+				</mrow>
+				<mn>2</mn>
+			</mroot>
+		</math>
+		</p>
+		<p>However, by surrounding a whole sentence, you can make a yes-or-no question:
+		<math>
+			<mroot>
+				<mn>27</mn>
+				<mn>2</mn>
+			</mroot>
+		</math>
+		and this would mean "Are you fighting?"
+		</p>
+		<br />
+		
+		<p>Cube roots express wants, and they surround predicates.<br />For example,
+		<math>
+			<mn>1</mn>
+			<mroot>
+				<mrow>
+					<mn>5</mn>
+					<mo>*</mo>
+					<mn>9</mn>
+				</mrow>
+				<mn>3</mn>
+			</mroot>
+		</math>
+		"I want to have a rock."</p>
+		
+		<br />
+		
+		<a href="../index.html" class = "extLink Da" style="font-size: 20pt;">MAIN PAGE</a>
+		
+		<script type=text/javascript>
+			function changeTheme() {
+				var sw = document.getElementById("themeSwitch");
+				if (sw.checked){
+					var body = document.getElementById("backG");
+					body.classList.replace("Dbackg", "Lbackg");
+					var subs = document.getElementsByClassName("extLink");
+					for (var i = 0; i < subs.length; i++){
+						subs[i].classList.replace("Da", "La");
+					}
+				} else {
+					var body = document.getElementById("backG");
+					body.classList.replace("Lbackg", "Dbackg");
+					var subs = document.getElementsByClassName("extLink");
+					for (var i = 0; i < subs.length; i++){
+						subs[i].classList.replace("La", "Da");
+					}
+				}
+			}
+			
+			changeTheme();
+		</script>
+	</body>
+</html>

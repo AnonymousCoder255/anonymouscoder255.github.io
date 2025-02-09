@@ -78,7 +78,7 @@ caption {
 	--tc: #111;
 }
 
-p, h1, details, .top, .bottom {
+p, h1, details, .top, .bottom, math {
 	font-optical-sizing: auto;
 	font-family: "Roboto Mono", monospace;
 	font-style: normal;
