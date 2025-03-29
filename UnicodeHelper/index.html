@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Copy Unicode</title>
+        <style>
+            pre {
+                font-family: "Courier New", monospace;
+            }
+
+            #hexcinput {
+                resize: horizontal;
+            }
+
+            body {
+                transition: all 0.5s;
+                font-size: x-large;
+            }
+
+            .Dbackg {
+                background-color: #333333;
+                color: #FFF;
+            }
+
+            .Lbackg {
+                background-color: #EFEFEE;
+                color: #000;
+            }
+
+            a {
+                color: #838383;
+            }
+        </style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0" />
+        <link rel="stylesheet" href="../switch.css">
+    </head>
+    <body class="Dbackg" id="backG">
+        <label class="switch topLeft">
+            <input type="checkbox" id="themeSwitch" onclick="changeTheme()">
+            <span class="slider material-symbols-outlined"></span>
+        </label>
+
+        <pre>Input hex code: <input id="hexcinput"></pre>
+        <pre>Input font    : <input id="fontinp"></pre>
+        <p id="char"></p>
+        <a href="../">back</a> <a onclick="copyText();" href="#">copy</a>
+
+        <script>
+            var inp1 = document.getElementById("hexcinput");
+            var inp2 = document.getElementById("fontinp");
+            var res = document.getElementById("char");
+
+            function copyText(){
+                navigator.clipboard.writeText(res.innerText);
+            }
+
+            function changedHex(){
+                let parsed = inp1.value.split(" ");
+                res.innerHTML = "";
+                for (let i in parsed){
+                    res.innerHTML += "&#x" + parsed[i];
+                }
+                if (inp1.value === "") res.innerHTML = "";
+            }
+
+            inp1.addEventListener("change", (event) => {
+                changedHex();
+            });
+            inp2.addEventListener("change", (event) => {
+                res.style.fontFamily = inp2.value;
+            });
+
+            changedHex();
+            if (inp2.value !== "") res.style.fontFamily = inp2.value;
+
+			function changeTheme() {
+				var sw = document.getElementById("themeSwitch");
+				if (sw.checked){
+					var body = document.getElementById("backG");
+					body.classList.replace("Dbackg", "Lbackg");
+				} else {
+					var body = document.getElementById("backG");
+					body.classList.replace("Lbackg", "Dbackg");
+				}
+			}
+			
+			changeTheme();
+		</script>
+    </body>
+</html>
