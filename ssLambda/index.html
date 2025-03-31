@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0" />
+        <link rel="stylesheet" href="../switch.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="Dbackg" id="backG">
+        <h1 style="text-align: center;">λ-Calculus Visual Representation</h1>
+        <label class="switch tL">
+          <input type="checkbox" id="themeSwitch" onclick="changeTheme()">
+          <span class="slider material-symbols-outlined"></span>
+        </label>
+
+        <p>- takes heavy inspiration from the writing system <a href="https://jonathangabel.com/toki-pona/">sitelen sitelen</a>
+        <br />This is a simple way of visualizing <a href="https://en.wikipedia.org/wiki/Lambda_calculus">λ-Calculus</a>, possibly even a writing system?</p>
+        <hr>
+        <p>The functions/abstractions look like this:<br />
+        <img src="./lambdaAbstraction.png" style="width: 150px; height: 150px"><br />
+        Which is equivalent to (λx.y)</p>
+        <hr>
+        <p>The applications of functions look like this:<br />
+        <img src="./funcApplication.png" style="width: 150px; height: 150px;"><br />
+        Which becomes (y x), where you can also add multiple arguments such as (x y z)
+        </p>
+        <hr>
+        <p>Functions can also expand inside applications, as follows:<br /><img src="./expandedLambda.png" style="width: 337.5px; height: 150px;"><br />
+        Both of these would be ((λx.y) z)</p>
+        <hr>
+        <p style="text-align:center">Examples</p>
+        <img src="./examples.png" width="50%">
+
+        <script type=text/javascript>
+            function changeTheme() {
+                var sw = document.getElementById("themeSwitch");
+                if (sw.checked){
+                    var body = document.getElementById("backG");
+                    body.classList.replace("Dbackg", "Lbackg");
+                } else {
+                    var body = document.getElementById("backG");
+                    body.classList.replace("Lbackg", "Dbackg");
+                }
+            }
+            
+            changeTheme();
+        </script>
+    </body>
+</html>
